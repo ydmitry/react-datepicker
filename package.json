@@ -5,13 +5,8 @@
   "version": "0.27.0",
   "license": "MIT",
   "homepage": "https://github.com/Hacker0x01/react-datepicker",
-  "main": "dist/react-datepicker.min.js",
+  "main": "src/datepicker.jsx",
   "style": "dist/react-datepicker.min.css",
-  "files": [
-    "*.md",
-    "dist",
-    "lib"
-  ],
   "keywords": [
     "react",
     "datepicker",
