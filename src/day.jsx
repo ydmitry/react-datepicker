@@ -17,7 +17,9 @@ var Day = React.createClass({
     month: React.PropTypes.number,
     onClick: React.PropTypes.func,
     selected: React.PropTypes.object,
-    startDate: React.PropTypes.object
+    startDate: React.PropTypes.object,
+    pricesLoading: React.PropTypes.bool,
+    prices: React.PropTypes.object,
   },
 
   handleClick (event) {
@@ -65,9 +67,20 @@ var Day = React.createClass({
   },
 
   render () {
+    let prices = this.props.prices || {};
+    let day = this.props.day;
+    let dayFormatted = moment(day).format('YYYY-MM-DD');
+    console.log('prices', prices);
     return (
       <div className={this.getClassNames()} onClick={this.handleClick}>
-        {this.props.day.date()}
+        <div className="react-datepicker__day-number">
+          {day.date()}
+        </div>
+        {this.props.pricesLoading ?
+            <span className="react-datepicker__loading" />
+            :
+            (prices[dayFormatted] ? <span className="react-datepicker__price">{prices[dayFormatted]}$</span> : null)
+        }
       </div>
     )
   }

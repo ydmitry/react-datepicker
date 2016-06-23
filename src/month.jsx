@@ -14,7 +14,9 @@ var Month = React.createClass({
     minDate: React.PropTypes.object,
     onDayClick: React.PropTypes.func,
     selected: React.PropTypes.object,
-    startDate: React.PropTypes.object
+    startDate: React.PropTypes.object,
+    pricesLoading: React.PropTypes.bool,
+    prices: React.PropTypes.object
   },
 
   handleDayClick (day) {
@@ -47,6 +49,8 @@ var Month = React.createClass({
             filterDate={this.props.filterDate}
             selected={this.props.selected}
             startDate={this.props.startDate}
+            pricesLoading={this.props.pricesLoading}
+            prices={this.props.prices}
             endDate={this.props.endDate} />
       )
   },

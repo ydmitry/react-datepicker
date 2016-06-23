@@ -22,7 +22,9 @@ var Calendar = React.createClass({
     selected: React.PropTypes.object,
     showYearDropdown: React.PropTypes.bool,
     startDate: React.PropTypes.object,
-    todayButton: React.PropTypes.string
+    todayButton: React.PropTypes.string,
+    pricesLoading: React.PropTypes.bool,
+    prices: React.PropTypes.object
   },
 
   mixins: [require('react-onclickoutside')],
@@ -175,6 +177,8 @@ var Calendar = React.createClass({
             includeDates={this.props.includeDates}
             filterDate={this.props.filterDate}
             selected={this.props.selected}
+            pricesLoading={this.props.pricesLoading}
+            prices={this.props.prices}
             startDate={this.props.startDate}
             endDate={this.props.endDate} />
         {this.renderTodayButton()}

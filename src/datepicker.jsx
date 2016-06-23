@@ -48,7 +48,9 @@ var DatePicker = React.createClass({
     tabIndex: React.PropTypes.number,
     tetherConstraints: React.PropTypes.array,
     title: React.PropTypes.string,
-    todayButton: React.PropTypes.string
+    todayButton: React.PropTypes.string,
+    pricesLoading: React.PropTypes.bool,
+    prices: React.PropTypes.object
   },
 
   getDefaultProps () {
@@ -149,6 +151,8 @@ var DatePicker = React.createClass({
         includeDates={this.props.includeDates}
         showYearDropdown={this.props.showYearDropdown}
         todayButton={this.props.todayButton}
+        pricesLoading={this.props.pricesLoading}
+        prices={this.props.prices}
         outsideClickIgnoreClass={outsideClickIgnoreClass} />
   },
 

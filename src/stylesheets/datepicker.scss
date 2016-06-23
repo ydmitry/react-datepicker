@@ -121,6 +121,13 @@
 
 .react-datepicker__day {
   cursor: pointer;
+  height: $item-size;
+  line-height: $item-size * 0.5;
+  vertical-align: top;
+
+  .react-datepicker__price {
+    font-size: 0.8em;
+  }
 
   &:hover {
     border-radius: $border-radius;

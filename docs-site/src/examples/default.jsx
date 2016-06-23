@@ -21,13 +21,14 @@ export default React.createClass({
     return <div className="row">
       <pre className="column example__code">
         <code className="jsx">
-          {"<DatePicker"}<br />
+          {"<DateP111icker"}<br />
               {"selected={this.state.startDate}"}<br />
               {"onChange={this.handleChange} />"}
         </code>
       </pre>
       <div className="column">
         <DatePicker
+            prices={{"2016-06-24": 100}}
             selected={this.state.startDate}
             onChange={this.handleChange} />
       </div>
